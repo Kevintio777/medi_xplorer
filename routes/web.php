@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ApotekerDashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => '/'], function () {
     Voyager::routes();
+
+    Route::get('/', [ApotekerDashboard::class, 'index'])->name('voyager.dashboard');
+
 });
