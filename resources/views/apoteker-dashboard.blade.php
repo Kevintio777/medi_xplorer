@@ -20,7 +20,7 @@
                     <div class="panel widget center bgimage" style="background-image:url('storage/{{ Voyager::setting('admin.dashboard_pasien_card') }}'); background-size: cover;">
                         <div class="dimmer"></div>
                         <div class="panel-content">
-                            <i class="voyager-group"></i>
+                            <i class="{{ setting('admin.dashboard_pasien_icon') }}"></i>
                             <h2 class="card-title text-decoration-none">Pasien</h2>
                             <p class="card-text">Total: {{ $pasienCount }}</p>
                         </div>
@@ -32,7 +32,7 @@
                     <div class="panel widget center bgimage" style="background-image:url('storage/{{ Voyager::setting('admin.dashboard_obat_card') }}'); background-size: cover;">
                         <div class="dimmer"></div>
                         <div class="panel-content">
-                            <i class="voyager-chemistry"></i>
+                            <i class="{{ setting('admin.dashboard_obat_icon') }}"></i>
                             <h2 class="card-title">Riwayat Obat</h2>
                             <p class="card-text">Total: {{ $obatCount }}</p>
                         </div>
@@ -44,7 +44,7 @@
                     <div class="panel widget center bgimage" style="background-image:url('storage/{{ Voyager::setting('admin.dashboard_alergi_card') }}'); background-size: cover;">
                         <div class="dimmer"></div>
                         <div class="panel-content">
-                            <i class="voyager-shield"></i>
+                            <i class="{{ setting('admin.dashboard_alergi_icon') }}"></i>
                             <h2 class="card-title">Riwayat Alergi</h2>
                             <p class="card-text">Total: {{ $alergiCount }}</p>
                         </div>
@@ -52,11 +52,11 @@
                 </a>
             </div>
             <div class="col-md-4">
-                <a href="{{ route('voyager.riwayat-alergi.index') }}" class="text-decoration-none text-dark">
+                <a href="{{ route('voyager.riwayat-penyakit.index') }}" class="text-decoration-none text-dark">
                     <div class="panel widget center bgimage" style="background-image:url('storage/{{ Voyager::setting('admin.dashboard_penyakit_card') }}'); background-size: cover;">
                         <div class="dimmer"></div>
                         <div class="panel-content">
-                            <i class="voyager-shield"></i>
+                            <i class="{{ setting('admin.dashboard_penyakit_icon') }}"></i>
                             <h2 class="card-title">Riwayat Penyakit</h2>
                             <p class="card-text">Total: {{ $penyakitCount }}</p>
                         </div>
