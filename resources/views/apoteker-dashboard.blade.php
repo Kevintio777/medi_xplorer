@@ -12,7 +12,6 @@
 
 
 @section('content')
-    @dump(setting('admin.dashboard_pasien_card'))
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4">
