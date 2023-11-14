@@ -15,8 +15,12 @@ use App\Http\Controllers\ApotekerDashboard;
 */
 
 Route::group(['prefix' => '/'], function () {
+
     Voyager::routes();
 
-    Route::get('/', [ApotekerDashboard::class, 'index'])->name('voyager.dashboard');
+    Route::group(['middleware' => ['admin.user']], function () {
+        Route::get('/', [ApotekerDashboard::class, 'index'])->name('voyager.dashboard');
+    });
+
 
 });
