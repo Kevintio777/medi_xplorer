@@ -12,11 +12,12 @@
 
 
 @section('content')
+    @dump(setting('admin.dashboard_pasien_card'))
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4">
                 <a href="{{ route("voyager.pasien.index") }}" class="text-decoration-none text-dark">
-                    <div class="panel widget center bgimage" style="background-image:url('{{ Voyager::setting('admin.dashboard_pasien_card') }}'); background-size: cover;">
+                    <div class="panel widget center bgimage" style="background-image:url('storage/{{ Voyager::setting('admin.dashboard_pasien_card') }}'); background-size: cover;">
                         <div class="dimmer"></div>
                         <div class="panel-content">
                             <i class="voyager-group"></i>
@@ -28,7 +29,7 @@
             </div>
             <div class="col-md-4">
                 <a href="{{ route('voyager.riwayat-obat.index') }}" class="text-decoration-none text-dark">
-                    <div class="panel widget center bgimage" style="background-image:url('{{ Voyager::setting('admin.dashboard_obat_card') }}'); background-size: cover;">
+                    <div class="panel widget center bgimage" style="background-image:url('storage/{{ Voyager::setting('admin.dashboard_obat_card') }}'); background-size: cover;">
                         <div class="dimmer"></div>
                         <div class="panel-content">
                             <i class="voyager-chemistry"></i>
@@ -40,7 +41,7 @@
             </div>
             <div class="col-md-4">
                 <a href="{{ route('voyager.riwayat-alergi.index') }}" class="text-decoration-none text-dark">
-                    <div class="panel widget center bgimage" style="background-image:url('{{ Voyager::setting('admin.dashboard_alergi_card') }}'); background-size: cover;">
+                    <div class="panel widget center bgimage" style="background-image:url('storage/{{ Voyager::setting('admin.dashboard_alergi_card') }}'); background-size: cover;">
                         <div class="dimmer"></div>
                         <div class="panel-content">
                             <i class="voyager-shield"></i>
@@ -52,7 +53,7 @@
             </div>
             <div class="col-md-4">
                 <a href="{{ route('voyager.riwayat-alergi.index') }}" class="text-decoration-none text-dark">
-                    <div class="panel widget center bgimage" style="background-image:url('{{ Voyager::setting('admin.dashboard_penyakit_card') }}'); background-size: cover;">
+                    <div class="panel widget center bgimage" style="background-image:url('storage/{{ Voyager::setting('admin.dashboard_penyakit_card') }}'); background-size: cover;">
                         <div class="dimmer"></div>
                         <div class="panel-content">
                             <i class="voyager-shield"></i>
